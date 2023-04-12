@@ -1,0 +1,78 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+a{text-decoration: none; color: black;}
+.left-side{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.left-nav-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 550px;
+    background-color: rgb(19, 19, 84);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ul{
+    font-size: 24px;
+    padding: 0;
+    padding-left: 1em;
+}
+li{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+    list-style-type: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.budweiser-logo{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+}
+.budweiser-logo img{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 80px;
+}
+.highlight{
+    display: inline-block;
+    position:absolute;
+    right: 0;
+    width: 6px;
+    height: 30px;
+    /**/
+    
+    top: 50%;
+    transform: translateY(-50%);
+}
+.active{
+    background-color: white;
+}
+.background-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    width: 75%;
+    height: 90%;
+    background-color: rgb(19,19,84);
+    border-radius: 10px;
+}
