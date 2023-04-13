@@ -75,4 +75,38 @@ li{
     height: 90%;
     background-color: rgb(19,19,84);
     border-radius: 10px;
+    overflow: hidden;
+}
+.background-inner-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 95%;
+    height: 95%;
+    background-color: white;
+    transform: translate(-50%,-50%);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+}
+.flex-item{
+    width: 30%;
+    background-color: black;
+}
+.flex-item.middle{
+    width: 70%;
+    height: 80%;
+    background-color: aqua;
+}
+.flex-container.middle{
+    height: 30%;
+    align-items: center;
+}
+.flex-container.bottom{
+    height: 30%;
+    justify-content: flex-end;
 }
