@@ -75,7 +75,7 @@ li{
     height: 90%;
     background-color: rgb(19,19,84);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: scroll;
 }
 .background-inner-container{
     position: absolute;
@@ -83,8 +83,8 @@ li{
     top: 50%;
     width: 95%;
     height: 95%;
-    background-color: white;
     transform: translate(-50%,-50%);
+    
 }
 
 .flex-container{
@@ -100,13 +100,11 @@ li{
 .flex-item.middle{
     width: 70%;
     height: 80%;
-    background-color: aqua;
 }
-.flex-container.middle{
-    height: 30%;
+.flex-container.left-middle, .right-middle{
+    height: 50%;
     align-items: center;
 }
-.flex-container.bottom{
-    height: 30%;
+.flex-container.right-middle{
     justify-content: flex-end;
 }
