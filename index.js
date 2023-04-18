@@ -14,7 +14,6 @@ class Container{
 class SmallContainer extends Container{
     #ele;
     #clsName = super.getClassName() + " small";
-    #obj;
 
     constructor(){
         super();
@@ -54,6 +53,8 @@ class FlexItem{
     #height
     #color
     #direct
+    #image = document.createElement("img");
+    
     constructor(width, height, color, direct){
         this.#width = width
         this.#height = height
@@ -64,13 +65,18 @@ class FlexItem{
     getHeight(){ return this.#height }
     getColor(){ return this.#color }
     getDirect(){ return this.#direct }
-    getEle(){
-        return this.#ele;
-    }
+    getEle(){return this.#ele;}
+    getImg(){
+        this.#image.style.width = "100%";
+        this.#image.style.height = "100%";
+        this.#image.setAttribute('alt', 'None');
+        return this.#image
+    };
 }
 class FlexSmallItem extends FlexItem{
     #ele;
     #clsName = "flex-item small";
+    #flexSmallImg;
     constructor(width, height, color, direct){
         super(width, height ,color, direct)
         this.init();
@@ -79,6 +85,9 @@ class FlexSmallItem extends FlexItem{
         this.#ele = super.getEle();
         this.#ele.setAttribute('class', this.#clsName);
         this.#ele.style.backgroundColor = this.getColor();
+        this.#flexSmallImg = this.getImg();
+        this.#flexSmallImg.setAttribute('src', 'https://mblogthumb-phinf.pstatic.net/MjAxOTA1MDRfMjEw/MDAxNTU2OTY5ODY5ODcz.y5pPLr-EfTy8RiWIbau5ktkVA59IQpP1g4Q1KU3aDxEg.cASFM_Wkh6HGmNl-WPCdnO_uiYovhDUXMbHPlzDQB0Mg.JPEG.nydelphie/IMG_3509.jpg?type=w800')
+        this.#ele.appendChild(this.#flexSmallImg)
     }
     getEle(){
         return this.#ele;
@@ -87,6 +96,7 @@ class FlexSmallItem extends FlexItem{
 class FlexMiddleItem extends FlexItem{
     #ele;
     #clsName = "flex-item middle";
+    #flexMiddleImage;
     constructor(width, height, color, direct){
         super(width, height ,color, direct)
         this.init();
@@ -98,6 +108,10 @@ class FlexMiddleItem extends FlexItem{
         this.#ele.setAttribute('class', this.#clsName);
         this.#ele.style.backgroundColor = this.getColor();
         this.#ele.style.height = this.getHeight();
+        this.#flexMiddleImage = this.getImg();
+        this.#flexMiddleImage.setAttribute('src', 'https://mblogthumb-phinf.pstatic.net/MjAxOTA1MDRfMjEw/MDAxNTU2OTY5ODY5ODcz.y5pPLr-EfTy8RiWIbau5ktkVA59IQpP1g4Q1KU3aDxEg.cASFM_Wkh6HGmNl-WPCdnO_uiYovhDUXMbHPlzDQB0Mg.JPEG.nydelphie/IMG_3509.jpg?type=w800')
+        this.#ele.appendChild(this.#flexMiddleImage);
+        
     }
     getEle(){
         return this.#ele;
@@ -126,4 +140,4 @@ function createCard(cnt, height = '40%', bgColor){
         mid.appendChild(new FlexMiddleItem('70%', height, bgColor).getEle())
     }
 }
-createCard(100, '70%','gray')
+createCard(100, '80%','gray')
